@@ -23,8 +23,8 @@ export default function Home() {
 
       <div className="flex-1 flex flex-col text-2xl mt-40 items-center">
         <Image src="/logo.png" alt="Logo" width={240} height={240} />
-        <h1 className="text-5xl font-black">Saturn Client</h1>
-        <p className="text-xl text-white mix-blend-difference">
+        <h1 className="text-5xl font-black font-['Panton']">Saturn Client</h1>
+        <p className="text-xl text-white mix-blend-difference font-['Panton']">
           The best open source Minecraft client
         </p>
 
