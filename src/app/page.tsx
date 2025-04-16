@@ -4,29 +4,22 @@ import {
   Book,
   BookOpen,
   BookOpenText,
+  Download,
   Github,
   House,
   Instagram,
   List,
+  Newspaper,
   Text,
   Users,
 } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[url('/background.png')] bg-cover bg-center bg-no-repeat">
-      {/* Header */}
-      <header className="text-white bg-white/5 backdrop-blur-xl py-4 text-center w-max mx-auto px-6 rounded-2xl mt-2">
-        <div className="flex flex-row w-max mx-auto gap-4">
-          <Link href="/">
-            <House className="transition-colors duration-300 hover:text-[#e2bf7d] animate-fadeIn" />
-          </Link>
-
-          <Link href="/blog">
-            <BookOpenText className="transition-colors duration-300 hover:text-[#e2bf7d] animate-fadeIn" />
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       <div className="flex-1 flex flex-col text-2xl mt-40 items-center">
         <Image src="/logo.png" alt="Logo" width={240} height={240} />
@@ -44,26 +37,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Footer */}
-      <footer className="text-white backdrop-blur-md py-4 text-center flex flex-row">
-        <div className="flex flex-row w-max mx-auto gap-1">
-          <p className="font-[mono]">&copy;</p> 2025 Saturn Client. All rights
-          reserved.
-        </div>
-
-        <div className="flex flex-row gap-4 mr-4">
-          <Link href="https://github.com/saturnclientmc" target="_blank">
-            <Github className="transition-colors duration-300 hover:text-[#e2bf7d] animate-fadeIn" />
-          </Link>
-
-          <Link
-            href="https://www.instagram.com/saturnclient/"
-            target="_blank"
-          >
-            <Instagram className="transition-colors duration-300 hover:text-[#e2bf7d] animate-fadeIn" />
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
