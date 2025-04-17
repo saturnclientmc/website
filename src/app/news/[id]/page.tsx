@@ -18,7 +18,7 @@ export default async function News({
   );
 
   return (
-    <div>
+    <div className="flex-1 flex flex-col h-screen">
       <div
         className="bg-[url('/background.png')] bg-center bg-no-repeat h-96"
         style={{ backgroundImage: `url(${image})` }}
@@ -36,7 +36,8 @@ export default async function News({
           written by {authors.join(", ")}
         </p>
       </div>
-      <div className="w-[54rem] mx-auto mt-10">
+
+      <div className="w-[54rem] mx-auto mt-5">
         <div className="rounded-2xl bg-[#111] p-5 markdown">
           <Md>{smartSplit(contents, "---", 3)[2]}</Md>
         </div>
