@@ -1,4 +1,5 @@
 import { Github, Instagram } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -11,6 +12,14 @@ export default function Footer() {
 
         <Link href="https://www.instagram.com/saturnclient/" target="_blank">
           <Instagram className="transition-colors duration-300 hover:text-[#e2bf7d] animate-fadeIn" />
+        </Link>
+
+        <Link href="https://www.instagram.com/saturnclient/" target="_blank">
+          <Image
+            src="/discord.svg"
+            alt="Discord"
+            className="transition-colors duration-300 hover:text-[#e2bf7d] animate-fadeIn"
+          />
         </Link>
       </div>
 
