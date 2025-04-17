@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import listNews from "@/lib/news";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,14 +15,16 @@ import Link from "next/link";
 //   },
 // ];
 
-const newsList = Array(3 * 6).fill({
-  authors: [],
-  title: "Hello World",
-  description: "lorem ipsum ipsum lorem",
-  image: "/background.png",
-  date: "2025-04-16",
-  id: "",
-});
+// const newsList = Array(3 * 6).fill({
+//   authors: [],
+//   title: "Hello World",
+//   description: "lorem ipsum ipsum lorem",
+//   image: "/background.png",
+//   date: "2025-04-16",
+//   id: "",
+// });
+
+const newsList = listNews();
 
 export default function News() {
   return (
