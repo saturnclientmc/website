@@ -10,13 +10,13 @@ export default function Download() {
       <div className="flex flex-col bg-[url('/background.png')] bg-center bg-no-repeat h-52">
         <Header />
 
-        <h1 className="text-5xl font-black m-auto w-max font-['Panton']">
+        <h1 className="text-5xl font-black m-auto w-max font-['Panton'] fade-in">
           DOWNLOAD
         </h1>
       </div>
 
-      <div className="w-full h-full flex flex-col items-center pt-6">
-        Release downloads aren't available yet :(
+      <div className="w-full h-full flex flex-col items-center pt-6 fade-in-up">
+        The launcher isn't available yet :(
         <Link
           href="https://github.com/saturnclientmc/saturnclient/releases/"
           target="_blank"

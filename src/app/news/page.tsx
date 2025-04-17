@@ -1,28 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import listNews from "@/lib/news";
-import Image from "next/image";
 import Link from "next/link";
-
-// const newsList = [
-//   {
-//     authors: [],
-//     title: "Hello World",
-//     description: "lorem ipsum ipsum lorem",
-//     image: "/background.png",
-//     date: "2025-04-16",
-//     id: "",
-//   },
-// ];
-
-// const newsList = Array(3 * 6).fill({
-//   authors: [],
-//   title: "Hello World",
-//   description: "lorem ipsum ipsum lorem",
-//   image: "/background.png",
-//   date: "2025-04-16",
-//   id: "",
-// });
 
 const newsList = listNews();
 
@@ -32,7 +11,7 @@ export default function News() {
       <div className="flex flex-col bg-[url('/background.png')] bg-center bg-no-repeat h-52">
         <Header />
 
-        <h1 className="text-5xl font-black m-auto w-max font-['Panton']">
+        <h1 className="text-5xl font-black m-auto w-max font-['Panton'] fade-in">
           CLIENT NEWS
         </h1>
       </div>
@@ -41,7 +20,7 @@ export default function News() {
         TODO: implement search and filtering
       </div>
 
-      <div className="py-8 px-5 w-full grid grid-rows-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="py-8 px-5 w-full grid grid-rows-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 fade-in-up">
         {newsList.map((news, i) => (
           <Link
             href={`/news/${news.id}`}
