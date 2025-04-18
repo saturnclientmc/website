@@ -18,9 +18,9 @@ export default async function News({
   );
 
   return (
-    <div className="flex-1 flex flex-col h-screen">
+    <div className="flex flex-col min-h-screen">
       <div
-        className="bg-[url('/background.png')] bg-center bg-no-repeat h-96"
+        className="bg-center bg-no-repeat h-96 flex-shrink-0"
         style={{ backgroundImage: `url(${image})` }}
       >
         <Header />
@@ -29,12 +29,8 @@ export default async function News({
           {title}
         </h1>
 
-        <p className="m-auto w-max font-['Panton'] !text-2xl mt-5">
-          {description}
-        </p>
-        <p className="m-auto w-max font-['Panton'] !text-xl">
-          written by {authors.join(", ")}
-        </p>
+        <p className="m-auto w-max !text-xl mt-5">{description}</p>
+        <p className="m-auto w-max !text-lg">written by {authors.join(", ")}</p>
       </div>
 
       <div className="w-[54rem] mx-auto mt-5">

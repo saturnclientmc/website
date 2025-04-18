@@ -23,23 +23,27 @@ export default function News() {
       <div className="py-8 px-5 w-full grid grid-rows-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 fade-in-up">
         {newsList.map((news, i) => (
           <Link
-            href={`/news/${news.id}`}
-            className="hover:scale-[1.02] transform transition duration-300"
-            key={i}
-          >
+          href={`/news/${news.id}`}
+          className="block"
+          key={i}
+        >
+          <div className="h-48 rounded-2xl overflow-hidden relative group p-4">
+            {/* Zoomable background image layer */}
             <div
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
               style={{
-                background: `url('${news.image}')`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
+                backgroundImage: `url('${news.image}')`,
               }}
-              className="object-cover h-48 rounded-2xl p-4"
-            >
+            />
+            
+            {/* Content layer, above the image */}
+            <div className="relative z-10 text-white">
               <h2 className="text-3xl font-black">{news.title}</h2>
               <p className="text-xl">{news.description}</p>
               <p className="text-md">{news.date}</p>
             </div>
-          </Link>
+          </div>
+        </Link>
         ))}
       </div>
 

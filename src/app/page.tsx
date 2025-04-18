@@ -1,18 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Book,
-  BookOpen,
-  BookOpenText,
-  Download,
-  Github,
-  House,
-  Instagram,
-  List,
-  Newspaper,
-  Text,
-  Users,
-} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -32,7 +19,7 @@ export default function Home() {
         <h1 className="text-5xl font-black font-['Panton'] fade-in-up">
           Saturn Client
         </h1>
-        <p className="text-xl text-white mix-blend-difference font-['Panton'] fade-in-up">
+        <p className="text-xl text-white font-['Panton'] font-bold mix-blend-difference fade-in-up">
           The best open source Minecraft client
         </p>
 

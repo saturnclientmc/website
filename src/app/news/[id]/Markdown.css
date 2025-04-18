@@ -27,3 +27,8 @@ ol {
 img {
   border-radius: 10px;
 }
+
+p a {
+  text-decoration: underline;
+  color: #e2bf7d;
+}

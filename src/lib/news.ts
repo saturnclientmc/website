@@ -1,4 +1,5 @@
 import { readdirSync, readFileSync } from "fs";
+import smartSplit from "./smartSplit";
 
 export interface News {
   authors: string[];
@@ -22,7 +23,7 @@ export function parseNews(news: string, id: string): News {
   };
 
   content.split("\n").forEach((v) => {
-    const [key, value] = v.split(":").map((v) => v.trim());
+    const [key, value] = smartSplit(v, ":", 2).map((v) => v.trim());
     if (key === "authors") {
       params.authors = value.split(",").map((v) => v.trim());
     } else if (
